@@ -30,6 +30,34 @@
         <div>排行榜</div>
       </div>
     </div>
+    <div class="score-main">
+      <div class="count-number">
+        <div class="count f30">3500</div>
+        <div>总积分</div>
+      </div>
+      <div class="count-text">
+        <div class="count-people">你最近一次的得分是<b>77</b>分</div>
+        <div class="count-pro">领先<span>26%</span>同龄人</div>
+      </div>
+    </div>
+    <div class="basic-info">
+      <div class="info-group">
+        <label>手机号码</label>
+        <span>13333333333</span>
+      </div>
+      <div class="info-group">
+        <label>邮箱地址</label>
+        <span>1333@133.com</span>
+      </div>
+      <div class="info-group">
+        <label>详细地址</label>
+        <span>江苏省苏州市工业园区星湖街328号12栋</span>
+      </div>
+      <div class="info-group">
+        <label>专业技能</label>
+        <span>打包</span>
+      </div>
+    </div>
 
   </div>
 </template>
