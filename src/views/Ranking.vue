@@ -3,11 +3,13 @@
     <template v-if="ranking">
       <ul class="bars">
         <li class="bar" v-for="(r,i) in ranking" :key="i">
-          <div class="bg" :style="bgStyle(r, i)"></div>
-          <div class="text">
-            {{r.name}}
-            <i>({{r.location}})</i>
-          </div>
+          <router-link :to="'/view/' + r.userID">
+            <div class="bg" :style="bgStyle(r, i)"></div>
+            <div class="text">
+              {{r.name}}
+              <i>({{r.location}})</i>
+            </div>
+          </router-link>
         </li>
       </ul>
       <div class="more">查看更多排名</div>
