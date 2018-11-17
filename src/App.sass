@@ -12,6 +12,7 @@ body
 input
   font-family: Consolas, "Microsoft Yahei"
   font-size: 16px
+  outline: none
 
 #app
   background: #eee
@@ -102,3 +103,45 @@ input
 .loading
   text-align: center
   margin: 1em 0
+
+.search-panel
+  position: fixed
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  z-index: 999
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background: rgba(0, 0, 0, .8)
+  .input
+    position: absolute
+    padding: 1em
+    width: 100%
+
+.search-box
+  display: flex
+  height: 50px
+  align-items: stretch
+  width: 100%
+  input
+    flex-grow: 1
+    background: transparent
+    border: 0
+    border-bottom: 1px solid #fff
+    color: #fff
+    text-align: center
+  input::placeholder
+    color: #eee
+  .close
+    width: 50px
+    background-image: url(/img/search.png)
+    background-size: 20px 20px
+    background-repeat: no-repeat
+    background-position: center

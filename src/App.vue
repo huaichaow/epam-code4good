@@ -4,7 +4,7 @@
       <div class="center-fixed">
         <div class="nav-item back"></div>
         <div class="nav-item title">{{title}}</div>
-        <div class="nav-item menu"></div>
+        <div class="nav-item menu" @click="toggleSearchPanel()" v-if="!showSearch"></div>
       </div>
     </div>
     <div id="content">
@@ -36,7 +36,16 @@
             <div class="text">我</div>
           </div>
         </router-link>
+      </div>
     </div>
+
+    <div class="search-panel" v-if="showSearch">
+      <div class="input">
+        <div class="search-box">
+          <input placeholder="请输入搜索内容">
+          <span class="close" @click="doSearch"></span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -46,12 +55,19 @@ export default {
   name: 'app',
   data() {
     return {
-      title: ""
+      title: "",
+      showSearch: false
     }
   },
   methods: {
     setTitle(title) {
       this.title = title || "";
+    },
+    toggleSearchPanel() {
+      this.showSearch = !this.showSearch;
+    },
+    doSearch() {
+      this.showSearch = !this.showSearch;
     }
   }
 }
