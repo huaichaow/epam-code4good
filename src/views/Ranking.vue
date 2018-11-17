@@ -3,8 +3,13 @@
     <ul class="bars" v-if="ranking">
       <li class="bar" v-for="(r,i) in ranking" :key="i">
         <div class="bg" :style="bgStyle(r, i)"></div>
+        <div class="text">
+          {{r.name}}
+          <i>({{r.location}})</i>
+        </div>
       </li>
     </ul>
+    <div class="loading" v-else>拼命加载中...</div>
   </div>
 </template>
 
@@ -38,13 +43,17 @@ export default {
   },
   methods: {
     getRankingData() {
-      this.ranking = [];
-      for (let i = 0; i < 10; i++) {
-        this.ranking.push({
-          name: `name ${i}`,
-          percent: (10 - i) * 100 / 10
-        });
-      }
+      this.httpGet('http://18.188.89.12:3000/api/v1/volunteers?limit=10&sort=serviveTotalTime')
+        .then(data => {
+          const ranking =  _.sortBy(data.list, (x) => {
+            return -x.serviveTotalTime;
+          });
+          const max = ranking[0].serviveTotalTime;
+          _.forEach(ranking, r => {
+            r.percent = 100 * r.serviveTotalTime / max;
+          });
+          this.ranking = ranking;
+      })
     },
     bgStyle(rank, i) {
       return {
