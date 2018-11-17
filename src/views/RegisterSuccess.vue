@@ -11,7 +11,7 @@
     </div>
 
     <br/>
-    
+
     <div class="thanks">
       <div>感谢您注册和使用志愿者平台</div>
       <div>和对志愿者事业的支持</div>

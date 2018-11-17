@@ -21,7 +21,7 @@
         <router-link to="/about" class="menu-item">
           <div>
             <div class="icon" style="background-image: url(/img/icon_tab_bar1@3x.png)"></div>
-            <div class="text">附件</div>
+            <div class="text">附近</div>
           </div>
         </router-link>
         <router-link to="/register" class="menu-item">
