@@ -1,0 +1,50 @@
+.home
+  height: 100%
+  min-height: 100%
+  background: #121
+  .title
+    width: 100%
+    font-size: 16px
+    text-align: center
+    margin: 0
+    line-height: 48px
+    color: #fff
+    font-weight: normal
+  .statistics
+    color: #fff
+    text-align: center
+    display: flex
+    justify-content: center
+    line-height: 30px
+    .population, .ranking
+      text-decoration: none
+      color: #fff
+    .population .icon
+      background-image: url('/img/icon_home_member@3x.png')
+    .ranking .icon
+      background-image: url('/img/icon_top@3x.png')
+  .map
+    width: 100%
+    position: relative
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      padding-bottom: 100%
+      background-image: url('/img/map.png')
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+.icon-label
+  display: flex
+  .icon
+    align-self: stretch
+    background-image: url('/img/icon_home_member@3x.png')
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    margin-right: 3px
+    &.small
+      width: 25px
+  .text
+    margin-top: 2px

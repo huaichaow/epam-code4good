@@ -1,38 +1,45 @@
 $nav-height: 50px
 $foot-height: 50px
+*
+  box-sizing: border-box
 
+html,
 body
+  height: 100%
   margin: 0
   font-family: Consolas, "Microsoft Yahei"
-  #app
-    background: #eee
-    height: 100%
+
+#app
+  background: #eee
+  height: 100%
+  width: 100%
+  max-width: 375px
+  margin: 0 auto
+  overflow: auto
+  #nav
     width: 100%
-    max-width: 375px
-    margin: 0 auto
-    overflow: auto
-    #nav
-      width: 100%
-      height: $nav-height
-      line-height: $nav-height
-      position: fixed
-      top: 0
-      left: 0
-      .center-fixed
-        background-color: #ef5245
-    #content
-      margin-top: $nav-height
-      margin-bottom: $foot-height
-    #foot
-      position: fixed
-      left: 0
-      bottom: 0
-      width: 100%
-      height: $foot-height
-      display: flex
-      .center-fixed
-        background-color: #f8f8f8
-        border-top: 1px solid #ccc
+    height: $nav-height
+    line-height: $nav-height
+    position: fixed
+    top: 0
+    left: 0
+    .center-fixed
+      background-color: #ef5245
+  #content
+    padding-top: $nav-height
+    padding-bottom: $foot-height
+    height: 100%
+    min-height: 100%
+  #foot
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+    height: $foot-height
+    display: flex
+    .center-fixed
+      background-color: #f8f8f8
+      border-top: 1px solid #ccc
 
 #nav
   display: flex
