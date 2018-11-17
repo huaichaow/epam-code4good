@@ -1,8 +1,21 @@
 <template>
   <div class="register">
     <div class="form-element">
+      <div class="label">姓名</div>
+      <input class="input" placeholder="姓名"/>
+    </div>
+    <div class="form-element">
+      <div class="label">用户名</div>
+      <input class="input" placeholder="用户名"/>
+    </div>
+    <div class="form-element" style="margin-bottom: 10px">
+      <div class="label">密码</div>
+      <input class="input" type="password" placeholder="密码"/>
+    </div>
+
+    <div class="form-element">
       <div class="label">选择地区</div>
-      <input class="input" placeholder="地区信息"/>
+      <div class="input" placeholder="地区信息">地区信息</div>
       <div class="icon">&gt;</div>
     </div>
     <div class="form-element">
@@ -34,6 +47,7 @@
     </div>
 
     <div class="button">立即注册</div>
+    <br/>
   </div>
 </template>
 
@@ -44,9 +58,9 @@ export default {
     return {
       title: "我要加入",
       skills: [
-        {key: "1", value: "技能1", selected: false},
-        {key: "2", value: "技能2", selected: false},
-        {key: "3", value: "技能3", selected: false}
+        {key: "1", value: "歌舞", selected: false},
+        {key: "2", value: "活动组织", selected: false},
+        {key: "3", value: "厨艺", selected: false}
       ],
       agreement: false
     }
@@ -71,4 +85,4 @@ export default {
 }
 </script>
 
-<style lang="sass" src="./Register.sass"></style>
+<style lang="sass" scoped src="./Register.sass"></style>

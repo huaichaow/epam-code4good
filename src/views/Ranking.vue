@@ -68,4 +68,4 @@ export default {
 }
 </script>
 
-<style lang="sass" src="./Ranking.sass"></style>
+<style lang="sass" scoped src="./Ranking.sass"></style>

@@ -40,5 +40,5 @@ export default {
 }
 </script>
 
-<style lang="sass" src="./RegisterSuccess.sass"></style>
+<style lang="sass" scoped src="./RegisterSuccess.sass"></style>
 
