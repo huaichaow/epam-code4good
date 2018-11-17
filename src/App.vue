@@ -42,7 +42,7 @@
     <div class="search-panel" v-if="showSearch">
       <div class="input">
         <div class="search-box">
-          <input placeholder="请输入搜索内容">
+          <input ref="searchInput" @keypress="searchPress" placeholder="请输入搜索内容">
           <span class="close" @click="doSearch"></span>
         </div>
       </div>
@@ -65,9 +65,22 @@ export default {
     },
     toggleSearchPanel() {
       this.showSearch = !this.showSearch;
+      if (this.showSearch) {
+        setTimeout(()=>{
+          this.$refs.searchInput.focus();
+        })
+      }
     },
     doSearch() {
       this.showSearch = !this.showSearch;
+    },
+    closeSearch() {
+      this.showSearch = false;
+    },
+    searchPress(e) {
+      if (e.which === 13) {
+        this.closeSearch();
+      }
     }
   }
 }
