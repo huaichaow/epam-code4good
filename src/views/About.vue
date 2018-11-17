@@ -62,4 +62,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'about',
+  data() {
+    return {
+      title: '附近'
+    }
+  }
+}
+</script>
+
 <style lang="sass" scoped src="./About.sass"></style>
