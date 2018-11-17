@@ -33,6 +33,8 @@
         </div>
       </div>
     </div>
+
+    <div class="button">立即加入</div>
   </div>
 </template>
 
