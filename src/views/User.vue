@@ -64,7 +64,7 @@
 
 <script>
 export default {
-  name: 'app',
+  name: 'user',
   data() {
     return {
       title: "我"

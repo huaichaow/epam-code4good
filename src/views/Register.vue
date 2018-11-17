@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: 'app',
+  name: 'register',
   data() {
     return {
       title: "我要加入",

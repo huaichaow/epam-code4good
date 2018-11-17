@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'app',
+  name: 'register-success',
   data() {
     return {
       title: "注册成功"

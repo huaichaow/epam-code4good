@@ -41,6 +41,11 @@ const router = new Router({
       path: '/register-success',
       name: 'register-success',
       component: () => import(/* webpackChunkName: "register-success" */ './views/RegisterSuccess.vue')
+    },
+    {
+      path: '/ranking',
+      name: 'ranking',
+      component: () => import(/* webpackChunkName: "register-success" */ './views/Ranking.vue')
     }
   ]
 })
