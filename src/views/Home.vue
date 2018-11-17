@@ -8,7 +8,7 @@
           <span class="text">2303</span>
         </router-link>
         &nbsp;|&nbsp;
-        <router-link to="/register" class="ranking icon-label">
+        <router-link to="/ranking" class="ranking icon-label">
           <span class="icon small"></span>
           <span class="text">排行榜</span>
         </router-link>
