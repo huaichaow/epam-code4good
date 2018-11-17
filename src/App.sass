@@ -1,9 +1,70 @@
+$nav-height: 50px
+$foot-height: 50px
+
 body
   margin: 0
+  font-family: Consolas, "Microsoft Yahei"
   #app
     background: #eee
-    position: fixed
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
+    height: 100%
+    width: 100%
+    max-width: 375px
+    margin: 0 auto
+    overflow: scroll
+    #nav
+      width: 100%
+      height: $nav-height
+      line-height: $nav-height
+      position: fixed
+      top: 0
+      left: 0
+      background-color: #ef5245
+      color: #fff
+    #content
+      margin-top: $nav-height
+      margin-bottom: $foot-height
+    #foot
+      position: fixed
+      left: 0
+      bottom: 0
+      width: 100%
+      height: $foot-height
+      background-color: #f8f8f8
+      border-top: 1px solid #ccc
+      display: flex
+#nav
+  display: flex
+  .nav-item
+    flex-grow: 0
+    &.title
+      flex-grow: 1
+      text-align: center
+
+.menu-item
+  flex-shrink: 0
+  flex-basis: 0
+  flex-grow: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #555
+  text-decoration: none
+
+  .icon
+    height: 20px
+    width: 50px
+    background-size: contain
+    background-position: 50% 50%
+    background-repeat: no-repeat
+  .text
+    font-size: 10px
+    width: 50px
+    text-align: center
+
+.grid
+  width: 100%
+  display: flex
+  .cell.max
+    grow: 1
+  .cell.min
+    grow: 0

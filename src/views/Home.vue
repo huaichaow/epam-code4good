@@ -11,6 +11,11 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
+  data() {
+    return {
+      title: '志愿者平台'
+    }
+  },
   components: {
     HelloWorld
   }
